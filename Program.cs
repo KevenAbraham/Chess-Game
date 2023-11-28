@@ -38,6 +38,7 @@ namespace Chess
 
                         Console.Write("Destino: ");
                         Posicao destino = Tela.LerPosicaoXadrez().toPosicao();
+                        partida.ValidarPosicaoDeDestino(origem, destino);
 
                         partida.RealizaJogada(origem, destino);
                     }
