@@ -33,7 +33,7 @@ namespace tabuleiro
 
         public void ColocarPeca(Peca p, Posicao pos)
         {
-            if(ExistePeca(pos))
+            if (ExistePeca(pos))
             {
                 throw new TabuleiroException("Já existe uma peça nessa posição!");
             }
@@ -43,13 +43,13 @@ namespace tabuleiro
 
         public Peca RetirarPeca(Posicao pos)
         {
-            if(Peca(pos) == null)
+            if (Peca(pos) == null)
             {
                 return null;
             }
-            
+
             Peca aux = Peca(pos);
-            aux.Posicao = null;
+            aux.Posicao = null; 
             Pecas[pos.Linha, pos.Coluna] = null;
             return aux;
         }
