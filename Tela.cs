@@ -14,12 +14,22 @@ namespace Chess
             ImprimirPecasCapturadas(partida);
             Console.WriteLine();
             Console.WriteLine($"Turno: {partida.Turno}");
-            Console.WriteLine($"Aguardando jogada: {partida.JogadorAtual}");
 
-            if (partida.Xeque)
+            if(!partida.Terminada)
             {
-                Console.WriteLine("XEQUE!");
+                Console.WriteLine($"Aguardando jogada: {partida.JogadorAtual}");
+
+                if (partida.Xeque)
+                {
+                    Console.WriteLine("XEQUE!");
+                }
             }
+            else
+            {
+                System.Console.WriteLine("XEQUEMATE!");
+                System.Console.WriteLine($"VENCEDOR: {partida.JogadorAtual}");
+            }
+
         }
 
         public static void ImprimirPecasCapturadas(PartidaDeXadrez partida)

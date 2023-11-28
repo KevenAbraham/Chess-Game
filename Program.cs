@@ -17,6 +17,7 @@ namespace Chess
                     {
                         Console.Clear();
                         Tela.ImprimirPartida(partida);
+
                         Console.WriteLine();
 
                         Console.Write("Origem: ");
@@ -43,6 +44,8 @@ namespace Chess
                         Console.ReadLine();
                     }
                 }
+                Console.Clear();
+                Tela.ImprimirPartida(partida);
             }
             catch (TabuleiroException e)
             {
